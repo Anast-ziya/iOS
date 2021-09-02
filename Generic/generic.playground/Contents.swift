@@ -49,6 +49,7 @@ let strawberry = Product(name: "strawberry", color: .red, size: .small)
 // print(result)
 
 
+
 // Specification
 
 protocol Specification {
