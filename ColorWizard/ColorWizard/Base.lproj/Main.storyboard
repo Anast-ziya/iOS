@@ -11,12 +11,12 @@
         <!--Color Wizard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ColorPresenterVC" customModule="ColorWizard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ColorPresenterViewController" customModule="ColorWizard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gray is boring. Choose a color!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqX-U8-All">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gray is boring. Choose a color!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqX-U8-All" userLabel="Color Name Label">
                                 <rect key="frame" x="107" y="415" width="200" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="0b3-i2-gST"/>
@@ -38,22 +38,22 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0JL-5v-OvG">
                             <color key="tintColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="6m9-tV-Jkd" kind="show" identifier="presentColorPickerVC" id="h7a-2g-m31"/>
+                                <segue destination="6m9-tV-Jkd" kind="show" identifier="presentColorPickerViewController" id="LxE-ae-3JK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="ColorNameLbl" destination="iqX-U8-All" id="t0w-fJ-vC8"/>
+                        <outlet property="ColorNameLabel" destination="iqX-U8-All" id="Ycu-qB-rQl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="772" y="76"/>
         </scene>
-        <!--Color PickerVC-->
+        <!--Color PickerViewController-->
         <scene sceneID="pRA-M9-G0r">
             <objects>
-                <viewController id="6m9-tV-Jkd" customClass="ColorPickerVC" customModule="ColorWizard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6m9-tV-Jkd" userLabel="Color PickerViewController" customClass="ColorPickerViewController" customModule="ColorWizard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vjz-tP-7Dh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,7 @@
                                             <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="colorBtnWasPressedWithSender:" destination="6m9-tV-Jkd" eventType="touchUpInside" id="45Y-xX-jec"/>
+                                            <action selector="colorButtonWasPressedWithSender:" destination="6m9-tV-Jkd" eventType="touchUpInside" id="tui-wX-qBc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k59-WD-tFZ">
@@ -82,7 +82,7 @@
                                             <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="colorBtnWasPressedWithSender:" destination="6m9-tV-Jkd" eventType="touchUpInside" id="4zw-uy-n4r"/>
+                                            <action selector="colorButtonWasPressedWithSender:" destination="6m9-tV-Jkd" eventType="touchUpInside" id="ONY-ki-A1K"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFo-kD-fV0">
@@ -94,7 +94,7 @@
                                             <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="colorBtnWasPressedWithSender:" destination="6m9-tV-Jkd" eventType="touchUpInside" id="Aq7-lw-GQp"/>
+                                            <action selector="colorButtonWasPressedWithSender:" destination="6m9-tV-Jkd" eventType="touchUpInside" id="Qe8-Hp-jqM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGf-kC-QQn">
@@ -106,7 +106,7 @@
                                             <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="colorBtnWasPressedWithSender:" destination="6m9-tV-Jkd" eventType="touchUpInside" id="nRW-uF-CVZ"/>
+                                            <action selector="colorButtonWasPressedWithSender:" destination="6m9-tV-Jkd" eventType="touchUpInside" id="44S-L3-EqF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zg-VX-oaq">
@@ -118,7 +118,7 @@
                                             <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="colorBtnWasPressedWithSender:" destination="6m9-tV-Jkd" eventType="touchUpInside" id="oWS-E9-9Uk"/>
+                                            <action selector="colorButtonWasPressedWithSender:" destination="6m9-tV-Jkd" eventType="touchUpInside" id="DZN-PC-AHJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
