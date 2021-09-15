@@ -21,6 +21,7 @@ var mutableArray: Array<Int> = [1, 2, 3, 4]
 var newArrayInt = Array(arrayLiteral: 5, 6, 7, 8)
 mutableArray[1...2] = [9]
 print(mutableArray)
+print(mutableArray.suffix(1))
 
 newArrayInt.count
 var emptyArray: Array<Int> = []
@@ -42,11 +43,30 @@ if let i = mutableArray.firstIndex(of: 9) {
     mutableArray[i] = 5
 }
 
-let cast = ["Alice", "Mark", "Akim", "Klim"]
+var cast = ["Alicia", "Mark", "Akim", "Klim"]
 let lowercaseNames = cast.map { $0.lowercased() }
 lowercaseNames
 let letterCounts = cast.map { $0.count }
 letterCounts
+
+let allHaveAtLeastFive = cast.allSatisfy({ $0.count >= 5 })
+
+let letters = "abacbdddefggg"
+let letterCount = letters.reduce(into: [:]) { counts, letter in
+    counts[letter, default: 0] += 1
+}
+
+cast.sort()
+print(cast)
+cast.sort(by: >)
+print(cast)
+
+let sortedCast = cast.sorted()
+print(sortedCast)
+
+let numb = 0...11
+let shuffledNumb = numb.shuffled()
+
 
 //Sets
 let ingredients: Set = ["pasta", "tomato sauce", "cheese", "salt", "pepper", "meet"]
@@ -59,7 +79,7 @@ subsetIngredients.isSubset(of: ingredients)
 
 ingredients.isSuperset(of: subsetIngredients)
 
-let anotherSet: Set = ["cheese","salt","milk cream", "chicken", "champignon"]
+let anotherSet: Set = ["cheese", "salt", "milk cream", "chicken", "champignon"]
 print(ingredients.intersection(anotherSet))
 
 for ingredient in anotherSet {
@@ -80,29 +100,44 @@ let starDictionary = Dictionary(uniqueKeysWithValues: zip(starNames, starDistanc
 
 dictionaryNumbers["one"] = "Один"
 
+let countryCodes = ["EUR": "Euro", "BYN": "Belarussian Ruble", "USD": "US Dollar"]
+if let index = countryCodes.firstIndex(where: { $0.value == "Euro" }) {
+    print(countryCodes[index])
+    print("Euro code is '\(countryCodes[index].key)'.")
+} else {
+    print("Didn't find 'Euro' as a value in the dictionary.")
+}
+
+
 // lazy var
 
-struct Dog {
-    var isAGoodBoy: Bool?
+struct Calculator {
+    static func calculateGamesPlayed() -> Int {
+        var games: [Int] = []
+        for i in 1...5000 { games.append(i) }
+        return games.last!
+    }
+}
+
+struct Player {
+    var name: String
+    var team: String
+    var position: String
     
-    lazy var goodBoy: String = {
-        return "Who is a good boy? You are a good boy."
-    }()
-    lazy var notGoodBoy: String = {
-        return "Ugh, bad dog!"
+    lazy var gamesPlayed = {
+        return Calculator.calculateGamesPlayed()
     }()
 }
 
-var myDog = Dog()
-myDog.isAGoodBoy = true
+var maxim = Player(name: "Maxim Anisimov", team: "Berserkers", position: "Shooting Guard")
 
-if myDog.isAGoodBoy! {
-    print(myDog.goodBoy)
-} else {
-    print(myDog.notGoodBoy)
-}
+print(maxim.gamesPlayed)
 
 // Optionals
+
+//: Optional chaining
+let names = ["Till Lindemann", "Richard Kruspe", "Paul Landers", "Oliver Riedel", "Christian Flake Lorenz", "Christoph Schneider"]
+let rammstein = names.first?.uppercased()
 
 //: Optional Binding
 var name: String? = "Amina"
@@ -127,4 +162,26 @@ implUnwr + 0.12
 var optionalInt: Int? 
 var mustHaveValue = optionalInt ?? 0
 mustHaveValue
+
+// Defer and guard
+
+func printStringNumbers() {
+    defer { print("1") }
+    defer { print("2") }
+    defer { print("3") }
+
+    print("4")
+}
+
+printStringNumbers()
+
+func calc(x: Double?, y: Double) {
+    guard let x = x else { return }
+    let rez = x + y
+    print(rez)
+}
+
+calc(x: nil, y: 4.4)
+calc(x: 5.6, y: 4.4)
+
 
