@@ -13,9 +13,9 @@ enum SwitchStatus: Togglable {
     
     mutating func toggle() {
         switch self {
-        case .on:
+       case .on:
             self = .off
-        case .off:
+       case .off:
             self = .on
         }
     }
