@@ -20,7 +20,6 @@ internal class ShowWeatherViewController: UIViewController {
         super.viewDidLoad()
         cityLabel.text = data.city
         temperatureLabel.text = String(data.temperature)
-
     }
     
     func  setImage() {

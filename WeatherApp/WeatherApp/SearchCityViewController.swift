@@ -7,10 +7,9 @@
 
 import UIKit
 
-private class SearchCityViewController: UIViewController {
+class SearchCityViewController: UIViewController {
 
     @IBOutlet private weak var searchBar: UISearchBar!
-    @IBOutlet private weak var helpLabel: UILabel!
     
     private let dataManager = DataManager(NewURL: API.AuthenticatedBaseURL)
     

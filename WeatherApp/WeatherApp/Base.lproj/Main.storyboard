@@ -97,12 +97,12 @@
                     <navigationItem key="navigationItem" title="Weather" id="UHu-ZI-npS">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="Aag-aX-Sm6">
                             <connections>
-                                <segue destination="OjJ-N5-5Jv" kind="show" id="AAx-WC-OQA"/>
+                                <segue destination="OjJ-N5-5Jv" kind="show" id="TON-GM-dI3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchButton" destination="Aag-aX-Sm6" id="VmC-Oy-7g6"/>
+                        <outlet property="searchButton" destination="Aag-aX-Sm6" id="3ys-op-bLR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -121,11 +121,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="423" height="911"/>
                             </imageView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kam-gS-KmW">
-                                <rect key="frame" x="0.0" y="88" width="414" height="66"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you can find any city where you want to know the weather" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1r-Bp-uVZ">
-                                <rect key="frame" x="37" y="408.5" width="340" height="130.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you can find the weather in any city you want" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV1-ZU-KCn">
+                                <rect key="frame" x="39" y="383" width="336" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="lpj-bO-14H"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="35"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -135,21 +138,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="RMm-My-apP" secondAttribute="bottom" constant="-49" id="2yh-ha-lMg"/>
+                            <constraint firstItem="vV1-ZU-KCn" firstAttribute="centerX" secondItem="kam-gS-KmW" secondAttribute="centerX" id="4oh-62-rgs"/>
                             <constraint firstItem="kam-gS-KmW" firstAttribute="trailing" secondItem="KFW-aj-QPI" secondAttribute="trailing" id="AvM-bF-tvV"/>
                             <constraint firstItem="kam-gS-KmW" firstAttribute="leading" secondItem="KFW-aj-QPI" secondAttribute="leading" id="Jyi-1e-LUS"/>
                             <constraint firstItem="RMm-My-apP" firstAttribute="top" secondItem="95k-5f-RPW" secondAttribute="topMargin" constant="-88" id="THw-vP-n2c"/>
                             <constraint firstItem="RMm-My-apP" firstAttribute="leading" secondItem="kam-gS-KmW" secondAttribute="leading" id="VII-F7-jHe"/>
-                            <constraint firstItem="KFW-aj-QPI" firstAttribute="trailing" secondItem="x1r-Bp-uVZ" secondAttribute="trailing" constant="37" id="YYY-eD-jlv"/>
-                            <constraint firstItem="KFW-aj-QPI" firstAttribute="bottom" secondItem="x1r-Bp-uVZ" secondAttribute="bottom" constant="323" id="Ydw-T2-SfG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RMm-My-apP" secondAttribute="trailing" constant="-29" id="isg-mV-eX1"/>
-                            <constraint firstItem="x1r-Bp-uVZ" firstAttribute="leading" secondItem="KFW-aj-QPI" secondAttribute="leading" constant="37" id="o7m-tq-LiB"/>
-                            <constraint firstItem="x1r-Bp-uVZ" firstAttribute="top" secondItem="kam-gS-KmW" secondAttribute="bottom" constant="255" id="sXX-ZP-q3V"/>
+                            <constraint firstItem="vV1-ZU-KCn" firstAttribute="leading" secondItem="KFW-aj-QPI" secondAttribute="leading" constant="39" id="rTx-K7-B34"/>
+                            <constraint firstItem="KFW-aj-QPI" firstAttribute="bottom" secondItem="vV1-ZU-KCn" secondAttribute="bottom" constant="295" id="wYS-gC-2r3"/>
                             <constraint firstItem="kam-gS-KmW" firstAttribute="top" secondItem="KFW-aj-QPI" secondAttribute="top" id="xGk-lS-aJi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="97w-4r-p0v"/>
                     <connections>
-                        <outlet property="helpLabel" destination="x1r-Bp-uVZ" id="Kgo-wB-rsB"/>
                         <outlet property="searchBar" destination="kam-gS-KmW" id="dTf-WE-QnV"/>
                     </connections>
                 </viewController>

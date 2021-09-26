@@ -69,10 +69,14 @@
 				5D2B77D626FD2C40003D4BA8 /* Models */,
 				5D2B77D326FD157A003D4BA8 /* Managers */,
 				5D2B77D026FD1076003D4BA8 /* Configuration */,
-				5DE13B9927008EF70004143D /* Application */,
 				5D2B77BA26FD0893003D4BA8 /* ChooseButtonViewController.swift */,
 				5D2B77CE26FD0D28003D4BA8 /* ShowWeatherViewController.swift */,
 				5DE13B97270068510004143D /* SearchCityViewController.swift */,
+				5D2B77B626FD0893003D4BA8 /* AppDelegate.swift */,
+				5D2B77B826FD0893003D4BA8 /* SceneDelegate.swift */,
+				5D2B77BC26FD0893003D4BA8 /* Main.storyboard */,
+				5D2B77BF26FD0895003D4BA8 /* Assets.xcassets */,
+				5D2B77C126FD0895003D4BA8 /* LaunchScreen.storyboard */,
 				5D2B77C426FD0895003D4BA8 /* Info.plist */,
 			);
 			path = WeatherApp;
@@ -100,18 +104,6 @@
 				5D2B77D726FD2C60003D4BA8 /* WeatherData.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		5DE13B9927008EF70004143D /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				5D2B77B626FD0893003D4BA8 /* AppDelegate.swift */,
-				5D2B77B826FD0893003D4BA8 /* SceneDelegate.swift */,
-				5D2B77BC26FD0893003D4BA8 /* Main.storyboard */,
-				5D2B77BF26FD0895003D4BA8 /* Assets.xcassets */,
-				5D2B77C126FD0895003D4BA8 /* LaunchScreen.storyboard */,
-			);
-			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

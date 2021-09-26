@@ -12,11 +12,11 @@ class ChooseButtonViewController: UIViewController {
     @IBOutlet private weak var searchButton: UIBarButtonItem!
     
     private let dataManager = DataManager(NewURL: API.AuthenticatedBaseURL)
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     @IBAction private func cityButtonWasPressed(_ sender: UIButton!) {
         // Fetch Weather Data
         if let city = sender.titleLabel?.text {

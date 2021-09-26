@@ -23,7 +23,6 @@ public struct WeatherData {
         } else {
             return nil
         }
-           
     }
 }
 
