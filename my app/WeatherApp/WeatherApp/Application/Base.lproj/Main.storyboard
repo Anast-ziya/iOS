@@ -23,7 +23,19 @@
                                 <rect key="frame" x="15" y="398" width="384" height="449"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YF9-5q-jbQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="83.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="68"/>
+                                        <color key="backgroundColor" white="0.5" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="45"/>
+                                        <color key="tintColor" white="0.5" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="My location">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cityButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qTL-PX-QjH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMs-cP-ulG">
+                                        <rect key="frame" x="0.0" y="76" width="384" height="68.5"/>
                                         <color key="backgroundColor" white="0.5" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="45"/>
                                         <color key="tintColor" white="0.5" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -31,11 +43,11 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="cityButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OED-RM-kt2"/>
+                                            <action selector="cityButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="irH-Sf-JeT"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvf-lz-UUL">
-                                        <rect key="frame" x="0.0" y="91.5" width="384" height="83.5"/>
+                                        <rect key="frame" x="0.0" y="152.5" width="384" height="68"/>
                                         <color key="backgroundColor" white="0.5" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="45"/>
                                         <state key="normal" title="Adana">
@@ -46,7 +58,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEU-rQ-uiU">
-                                        <rect key="frame" x="0.0" y="183" width="384" height="83"/>
+                                        <rect key="frame" x="0.0" y="228.5" width="384" height="68"/>
                                         <color key="backgroundColor" white="0.5" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="45"/>
                                         <state key="normal" title="Novosibirsk">
@@ -57,7 +69,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d0-QY-ytA">
-                                        <rect key="frame" x="0.0" y="274" width="384" height="83.5"/>
+                                        <rect key="frame" x="0.0" y="304.5" width="384" height="68.5"/>
                                         <color key="backgroundColor" white="0.5" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="45"/>
                                         <state key="normal" title="Nuuk">
@@ -68,7 +80,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYN-zg-BdL">
-                                        <rect key="frame" x="0.0" y="365.5" width="384" height="83.5"/>
+                                        <rect key="frame" x="0.0" y="381" width="384" height="68"/>
                                         <color key="backgroundColor" white="0.5" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="45"/>
                                         <state key="normal" title="Norilsk">
@@ -95,6 +107,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Weather" id="UHu-ZI-npS">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="JlU-L5-6Bt"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="o8y-jF-kzj">
                             <connections>
                                 <segue destination="mJR-GK-qso" kind="show" id="QdK-aS-Z0a"/>
@@ -106,7 +119,7 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
         </scene>
-        <!--Search City View Controller-->
+        <!--Weather-->
         <scene sceneID="IUm-fB-lOp">
             <objects>
                 <viewController id="mJR-GK-qso" customClass="SearchCityViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -146,7 +159,7 @@
                             <constraint firstItem="qxW-Gw-fXc" firstAttribute="leading" secondItem="rRl-zd-2zu" secondAttribute="leading" id="zEn-rX-lPq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bex-bJ-IxY"/>
+                    <navigationItem key="navigationItem" title="Weather" id="bex-bJ-IxY"/>
                     <connections>
                         <outlet property="helpLabel" destination="Tca-T9-jZ7" id="P9Z-X4-fTk"/>
                         <outlet property="searchBar" destination="qxW-Gw-fXc" id="Uv7-dy-mAr"/>

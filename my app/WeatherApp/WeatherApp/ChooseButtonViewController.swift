@@ -6,39 +6,32 @@
 //
 
 import UIKit
-import WeatherAPI
+import CoreLocation
 
-public class ChooseButtonViewController: UIViewController {
+public class ChooseButtonViewController: UIViewController, CLLocationManagerDelegate {
     
-    public override func viewDidLoad() {
-        super.viewDidLoad()
+    let locationManager = CLLocationManager()
+    
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        startSearch([locValue.latitude, locValue.longitude])
     }
-
-    @IBAction private func cityButtonWasPressed(_ sender: UIButton!) {
+    
+    @IBAction func cityButtonWasPressed(_ sender: UIButton!) {
         if let city = sender.titleLabel?.text {
-            WeatherFramework.getResponse(city: city) { (weatherData, error) in
-                if let error = error {
-                    showAlert(error)
-                } else {
-                    DispatchQueue.main.async {
-                        if let data = weatherData {
-                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                            let vc = storyboard.instantiateViewController(withIdentifier: "showWeather") as! ShowWeatherViewController
-                            vc.set(weatherData: data)
-                            self.navigationController?.pushViewController(vc, animated: true)
-                        }
-                    }
+            if city == locationButton {
+                locationManager.requestWhenInUseAuthorization()
+                if CLLocationManager.locationServicesEnabled() {
+                    locationManager.delegate = self
+                    locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                    locationManager.startUpdatingLocation()
                 }
+            } else {
+                startSearch([city])
             }
         }
-    
-    func showAlert(_ message: String) {
-           let dialog = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-           let okAction = UIAlertAction(title: "OK", style: .default, handler: { (alert:UIAlertAction!)-> Void in })
-           dialog.addAction(okAction)
-           self.present(dialog, animated: true, completion: nil)
-       }
     }
 }
+
 
 

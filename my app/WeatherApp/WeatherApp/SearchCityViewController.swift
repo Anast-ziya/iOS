@@ -17,34 +17,17 @@ class SearchCityViewController: UIViewController {
         super.viewDidLoad()
         searchBar.delegate = self
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
 extension SearchCityViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        
         if let city = searchBar.text {
-            WeatherFramework.getResponse(city: city.replacingOccurrences(of: " ", with: "%20")) { [self] (weatherData, error) in
-                if let error = error {
-                    showAlert(error)
-                } else {
-                    DispatchQueue.main.async {
-                        if let data = weatherData {
-                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                            let vc = storyboard.instantiateViewController(withIdentifier: "showWeather") as! ShowWeatherViewController
-                            vc.set(weatherData: data)
-                            self.navigationController?.pushViewController(vc, animated: true)
-                        }
-                    }
-                }
-            }
+        startSearch([city.replacingOccurrences(of: " ", with: "%20")])
         }
-    }
-
-    func showAlert(_ message: String) {
-       let dialog = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-       let okAction = UIAlertAction(title: "OK", style: .default, handler: { (alert:UIAlertAction!)-> Void in })
-       dialog.addAction(okAction)
-       self.present(dialog, animated: true, completion: nil)
    }
 }

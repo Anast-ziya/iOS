@@ -8,57 +8,54 @@
 import Foundation
 
 enum DataManagerError: Error {
-
-    case Unknown
-    case FailedRequest
-    case InvalidResponse
-
+    case unknown
+    case failedRequest
+    case invalidResponse
 }
 
 final class DataManager {
     
-    typealias WeatherDataCompletion = (AnyObject?, DataManagerError?) -> ()
-    let NewURL: URL
+    typealias WeatherDataCompletion = (Data?, DataManagerError?) -> ()
 
-    // MARK: - Initialization
-
-    init(NewURL: URL) {
-        self.NewURL = NewURL
-    }
-    
     // MARK: - Helper Methods
 
     private func didFetchWeatherData(data: Data?, response: URLResponse?, error: Error?, completion: WeatherDataCompletion) {
         if let _ = error {
-            completion(nil, .FailedRequest)
+            completion(nil, .failedRequest)
         } else if let data = data, let response = response as? HTTPURLResponse {
             if response.statusCode == 200 {
-                processWeatherData(data: data, completion: completion)
+                completion(data, nil)
             } else {
-                completion(nil, .FailedRequest)
+                completion(nil, .failedRequest)
             }
         } else {
-            completion(nil, .Unknown)
-        }
-    }
-    
-    private func processWeatherData(data: Data, completion: WeatherDataCompletion) {
-        if let JSON = try? JSONSerialization.jsonObject(with: data, options: []) as AnyObject {
-            completion(JSON, nil)
-        } else {
-            completion(nil, .InvalidResponse)
+            completion(nil, .unknown)
         }
     }
 
     // MARK: - Requesting Data
     
-    func weatherDataForCityName(city: String, completion: @escaping WeatherDataCompletion) {
+    func weatherDataForCity<T>(city: Array<T>, completion: @escaping WeatherDataCompletion) {
         // Create URL
-        let URL = URL(string: NewURL.absoluteString + "&q=\(city)&aqi=no")!
-        
-        // Create Data Task
-        URLSession.shared.dataTask(with: URL) { (data, response, error) in
+        let stringLocation = city.map{"\($0)"}.joined(separator: ",")
+        let url = URL(string: "http://api.weatherapi.com/v1/current.json?")
+        let queryItems = [URLQueryItem(name: "key", value: "ee0005d013eb42f895a130441211709"),
+                          URLQueryItem(name: "q", value: "\(stringLocation)"),
+                          URLQueryItem(name: "aqi", value: "no")]
+        let newUrl = url?.appending(queryItems)
+
+        if let URL = newUrl {
+            URLSession.shared.dataTask(with: URL) { (data, response, error) in
                 self.didFetchWeatherData(data: data, response: response, error: error, completion: completion)
-               }.resume()
-       }
+            }.resume()
+        }
+    }
+}
+
+extension URL {
+    func appending(_ queryItems: [URLQueryItem]) -> URL? {
+        guard var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: true) else { return nil }
+        urlComponents.queryItems = (urlComponents.queryItems ?? []) + queryItems
+        return urlComponents.url
+    }
 }

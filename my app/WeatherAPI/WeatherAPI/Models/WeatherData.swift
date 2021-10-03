@@ -9,19 +9,18 @@ import Foundation
 
 public struct WeatherData {
 
-    public var city: String
-    public var temperature: Double
+    public var city: String?
+    public var temperature: Double?
 
-    public init?(JSON: [String: AnyObject]) {
-       
-        if let location = JSON["location"], let current = JSON["current"] {
-            guard let city = location["name"] as? String else { return nil }
-            guard let temperature = current["temp_c"] as? Double else { return nil }
-                    
-            self.city = city
-            self.temperature = temperature
-        } else {
-            return nil
+    public init?(data: Data?) {
+        if let data = data {
+            do {
+                let parsedResult: WeatherModel = try JSONDecoder().decode(WeatherModel.self, from: data)
+                self.city = parsedResult.location.name
+                self.temperature = parsedResult.current.tempC
+            } catch let error {
+                print(error)
+            }
         }
     }
 }
