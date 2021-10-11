@@ -187,7 +187,7 @@ class Account {
      
     static var usdRate: Double = 2.52
      
-    init(capital: Double, rate: Double){
+    init(capital: Double, rate: Double) {
         self.capital = capital
         self.rate = rate
     }
