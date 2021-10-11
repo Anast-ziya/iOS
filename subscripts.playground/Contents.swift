@@ -37,12 +37,15 @@ print(carInService[2].name)
 
 enum Planet: Int {
     case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
-    static subscript(n: Int) -> Planet {
-        return Planet(rawValue: n)!
+    static subscript(n: Int) -> Planet? {
+        return Planet(rawValue: n)
     }
 }
-let mars = Planet[1]
-print(mars)
+
+let mars = Planet[4]
+if let planetName = mars {
+    print(planetName)
+}
 
 //Methods
 struct MutatingFunc {
@@ -177,7 +180,7 @@ narrowRectangle.height = 100
 narrowRectangle.width = 100
 print(narrowRectangle.height, narrowRectangle.width)
 
-class Account{
+class Account {
  
     var capital: Double
     var rate: Double
@@ -189,7 +192,7 @@ class Account{
         self.rate = rate
     }
      
-    func convert() -> Double{
+    func convert() -> Double {
         return capital / Account.usdRate
     }
 }
