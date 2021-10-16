@@ -9,6 +9,8 @@ import WeatherAPI
 import Foundation
 import UIKit
 
+fileprivate var spinner: UIView?
+
 extension UIViewController {
     
     func startSearch<T> (_ searchParam: Array<T>) {
@@ -19,7 +21,7 @@ extension UIViewController {
             } else {
                     if let data = weatherData {
                         let storyboard = UIStoryboard(name: nameOfMainStoryboard, bundle: nil)
-                        if let vc = storyboard.instantiateViewController(withIdentifier: identifierOfSsowWeatherViewController) as? ShowWeatherViewController{
+                        if let vc = storyboard.instantiateViewController(withIdentifier: identifierOfShowWeatherViewController) as? ShowWeatherViewController {
                             vc.set(weatherData: data)
                             self.navigationController?.pushViewController(vc, animated: true)
                         }
@@ -35,7 +37,7 @@ extension UIViewController {
         }
     }
     
-    func  setImage(_ temperature: Double) -> String {
+    func setImage(_ temperature: Double) -> String {
             if temperature >= 20 {
                 return "background-hot"
             }
@@ -53,4 +55,20 @@ extension UIViewController {
             }
         }
     
+    func showSpinner() {
+        spinner = UIView(frame: self.view.bounds)
+        spinner?.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let spin = UIActivityIndicatorView(style: .large)
+        if let spinner = spinner {
+            spin.center = spinner.center
+            spin.startAnimating()
+            spinner.addSubview(spin)
+            self.view.addSubview(spinner)
+        }
+    }
+    
+    func removeSpinner() {
+        spinner?.removeFromSuperview()
+        spinner = nil
+    }
 }

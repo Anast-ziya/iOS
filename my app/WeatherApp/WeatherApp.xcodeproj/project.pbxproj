@@ -17,7 +17,7 @@
 		5D2FCE492707573300B917D6 /* WeatherAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2FCE482707573300B917D6 /* WeatherAPI.framework */; };
 		5D2FCE4A2707573300B917D6 /* WeatherAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2FCE482707573300B917D6 /* WeatherAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D2FCE4F2708890F00B917D6 /* UIViewController+ExtensionOfSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2FCE4E2708890F00B917D6 /* UIViewController+ExtensionOfSearch.swift */; };
-		5D2FCE522709D6D000B917D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2FCE512709D6D000B917D6 /* Constants.swift */; };
+		5D2FCE522709D6D000B917D6 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2FCE512709D6D000B917D6 /* constants.swift */; };
 		5DE13C2F2704C4BE0004143D /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE13C2E2704C4BE0004143D /* SearchCityViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 		5D2B77CE26FD0D28003D4BA8 /* ShowWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWeatherViewController.swift; sourceTree = "<group>"; };
 		5D2FCE482707573300B917D6 /* WeatherAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WeatherAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D2FCE4E2708890F00B917D6 /* UIViewController+ExtensionOfSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ExtensionOfSearch.swift"; sourceTree = "<group>"; };
-		5D2FCE512709D6D000B917D6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5D2FCE512709D6D000B917D6 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		5DE13C2E2704C4BE0004143D /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +105,7 @@
 		5D2FCE502709D6B700B917D6 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				5D2FCE512709D6D000B917D6 /* Constants.swift */,
+				5D2FCE512709D6D000B917D6 /* constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 				5D2FCE4F2708890F00B917D6 /* UIViewController+ExtensionOfSearch.swift in Sources */,
 				5D2B77BB26FD0893003D4BA8 /* ChooseButtonViewController.swift in Sources */,
 				5DE13C2F2704C4BE0004143D /* SearchCityViewController.swift in Sources */,
-				5D2FCE522709D6D000B917D6 /* Constants.swift in Sources */,
+				5D2FCE522709D6D000B917D6 /* constants.swift in Sources */,
 				5D2B77B726FD0893003D4BA8 /* AppDelegate.swift in Sources */,
 				5D2B77CF26FD0D28003D4BA8 /* ShowWeatherViewController.swift in Sources */,
 				5D2B77B926FD0893003D4BA8 /* SceneDelegate.swift in Sources */,
@@ -284,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -339,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

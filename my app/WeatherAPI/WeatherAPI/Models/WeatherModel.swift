@@ -23,5 +23,4 @@ public struct WeatherModel: Decodable {
         self.current = try container.decode(Current.self, forKey: .current)
 
     }
-    
 }

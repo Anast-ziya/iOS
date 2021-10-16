@@ -7,6 +7,6 @@
 
 import Foundation
 
-let identifierOfSsowWeatherViewController = "showWeather"
+let identifierOfShowWeatherViewController = "showWeather"
 let nameOfMainStoryboard = "Main"
 let locationButton = "My location"
