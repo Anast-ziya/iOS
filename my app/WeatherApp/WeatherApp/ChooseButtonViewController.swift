@@ -15,7 +15,6 @@ public class ChooseButtonViewController: UIViewController, CLLocationManagerDele
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         startSearch([locValue.latitude, locValue.longitude])
-        self.removeSpinner()
     }
     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
@@ -23,9 +22,9 @@ public class ChooseButtonViewController: UIViewController, CLLocationManagerDele
     
     @IBAction func cityButtonWasPressed(_ sender: UIButton!) {
         if let city = sender.titleLabel?.text {
+            self.showSpinner()
             if city == locationButton {
                 locationManager.requestWhenInUseAuthorization()
-                self.showSpinner()
                 if CLLocationManager.locationServicesEnabled() {
                     locationManager.delegate = self
                     locationManager.desiredAccuracy = kCLLocationAccuracyReduced

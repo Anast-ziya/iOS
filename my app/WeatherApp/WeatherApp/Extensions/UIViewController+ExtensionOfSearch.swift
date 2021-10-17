@@ -22,6 +22,7 @@ extension UIViewController {
                     if let data = weatherData {
                         let storyboard = UIStoryboard(name: nameOfMainStoryboard, bundle: nil)
                         if let vc = storyboard.instantiateViewController(withIdentifier: identifierOfShowWeatherViewController) as? ShowWeatherViewController {
+                            self.removeSpinner()
                             vc.set(weatherData: data)
                             self.navigationController?.pushViewController(vc, animated: true)
                         }
