@@ -7,7 +7,7 @@
 
 import Foundation
 
-public typealias WeatherRequest = (_ weatherData: WeatherData?, _ errorMessage: String?) -> ()
+/* public typealias WeatherRequest = (_ weatherData: WeatherData?, _ errorMessage: String?) -> ()
 
 public class WeatherFramework {
 
@@ -30,3 +30,4 @@ public class WeatherFramework {
         }
     }
 }
+*/

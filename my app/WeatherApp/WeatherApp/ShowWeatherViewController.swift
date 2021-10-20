@@ -9,7 +9,7 @@ import UIKit
 import WeatherAPI
 
 internal class ShowWeatherViewController: UIViewController {
-
+    
     @IBOutlet private weak var background: UIImageView!
     @IBOutlet private weak var cityLabel: UILabel!
     @IBOutlet private weak var temperatureLabel: UILabel!
@@ -23,11 +23,10 @@ internal class ShowWeatherViewController: UIViewController {
             cityLabel.text = data?.city
             temperatureLabel.text = String(temperature)
         }
-        
     }
     
     func set(weatherData: WeatherData) {
         self.data = weatherData
     }
-
+    
 }

@@ -8,34 +8,82 @@
 import UIKit
 import CoreLocation
 
-public class ChooseButtonViewController: UIViewController, CLLocationManagerDelegate {
+class ChooseButtonViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
-    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        startSearch([locValue.latitude, locValue.longitude])
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        locationManager.delegate = self
     }
-    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Failed to find user's location: \(error.localizedDescription)")
-   }
     
-    @IBAction func cityButtonWasPressed(_ sender: UIButton!) {
+    @IBAction private func cityButtonWasPressed(_ sender: UIButton!) {
         if let city = sender.titleLabel?.text {
             self.showSpinner()
             if city == locationButton {
-                locationManager.requestWhenInUseAuthorization()
-                if CLLocationManager.locationServicesEnabled() {
-                    locationManager.delegate = self
-                    locationManager.desiredAccuracy = kCLLocationAccuracyReduced
-                    locationManager.requestLocation()
-                }
+                requestLocationIfNeeded()
             } else {
-                startSearch([city])
+                SearchManager.startSearch([city]) { (data, error) in
+                    if error != nil {
+                        self.showAlert("Something goes wrong.")
+                    } else {
+                        if let data = data {
+                            self.swichViewController(data)
+                        }
+                    }
+                }
+            }
+        }
+        
+        func requestLocationIfNeeded() {
+            switch locationManager.authorizationStatus {
+            case .authorizedWhenInUse:
+                locationRequest()
+            case .denied:
+                permissionDenied()
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+                if CLLocationManager.locationServicesEnabled()  {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        requestLocationIfNeeded()
+                    }
+                }
+            default:
+                locationManager.requestAlwaysAuthorization()
             }
         }
     }
 }
 
-
+extension ChooseButtonViewController {
+    
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        SearchManager.startSearch([locValue.latitude, locValue.longitude]) { (data, error) in
+            if error != nil {
+                self.showAlert("Something goes wrong.")
+            } else {
+                if let data = data {
+                    self.swichViewController(data)
+                }
+            }
+        }
+    }
+    
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        showAlert("Failed to find user's location.")
+        removeSpinner()
+    }
+    
+    func locationRequest() {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.desiredAccuracy = kCLLocationAccuracyReduced
+            locationManager.requestLocation()
+        }
+    }
+    func permissionDenied() {
+        showAlert("Location use was rejected. Change this in your phone settings.")
+        removeSpinner()
+    }
+}
 

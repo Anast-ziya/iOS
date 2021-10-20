@@ -11,7 +11,6 @@
 		5D2FCE56270A2C5B00B917D6 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2FCE55270A2C5B00B917D6 /* LocationModel.swift */; };
 		5D2FCE58270A2C9400B917D6 /* CurrentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2FCE57270A2C9400B917D6 /* CurrentModel.swift */; };
 		5DE13BE12704764C0004143D /* WeatherAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE13BDF2704764C0004143D /* WeatherAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5DE13BE8270476950004143D /* WeatherFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE13BE7270476950004143D /* WeatherFramework.swift */; };
 		5DE13BEE270477000004143D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE13BED270477000004143D /* DataManager.swift */; };
 		5DE13BF02704772B0004143D /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE13BEF2704772B0004143D /* WeatherData.swift */; };
 /* End PBXBuildFile section */
@@ -23,7 +22,6 @@
 		5DE13BDC2704764C0004143D /* WeatherAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeatherAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE13BDF2704764C0004143D /* WeatherAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherAPI.h; sourceTree = "<group>"; };
 		5DE13BE02704764C0004143D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DE13BE7270476950004143D /* WeatherFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFramework.swift; sourceTree = "<group>"; };
 		5DE13BED270477000004143D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5DE13BEF2704772B0004143D /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +60,6 @@
 				5DE13BEC270476E70004143D /* Managers */,
 				5DE13BDF2704764C0004143D /* WeatherAPI.h */,
 				5DE13BE02704764C0004143D /* Info.plist */,
-				5DE13BE7270476950004143D /* WeatherFramework.swift */,
 			);
 			path = WeatherAPI;
 			sourceTree = "<group>";
@@ -169,7 +166,6 @@
 				5DE13BF02704772B0004143D /* WeatherData.swift in Sources */,
 				5D2FCE54270A2C2500B917D6 /* WeatherModel.swift in Sources */,
 				5D2FCE56270A2C5B00B917D6 /* LocationModel.swift in Sources */,
-				5DE13BE8270476950004143D /* WeatherFramework.swift in Sources */,
 				5D2FCE58270A2C9400B917D6 /* CurrentModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

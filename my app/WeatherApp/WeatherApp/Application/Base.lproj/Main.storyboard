@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FLe-7F-s3C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FLe-7F-s3C">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -133,10 +133,18 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="BlZ-vN-t4D">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <gestureRecognizers/>
                             </imageView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qxW-Gw-fXc">
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="qxW-Gw-fXc">
                                 <rect key="frame" x="0.0" y="88" width="414" height="39"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you can find the weather in any city you want" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tca-T9-jZ7">
                                 <rect key="frame" x="20" y="153" width="374" height="590"/>
@@ -147,14 +155,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rRl-zd-2zu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Tca-T9-jZ7" firstAttribute="centerY" secondItem="BlZ-vN-t4D" secondAttribute="centerY" id="5Eh-e6-sfn"/>
                             <constraint firstItem="rRl-zd-2zu" firstAttribute="bottom" secondItem="Tca-T9-jZ7" secondAttribute="bottom" constant="119" id="7Mm-VZ-7NO"/>
-                            <constraint firstItem="BlZ-vN-t4D" firstAttribute="trailing" secondItem="rRl-zd-2zu" secondAttribute="trailing" id="BfA-eY-kmA"/>
                             <constraint firstItem="BlZ-vN-t4D" firstAttribute="leading" secondItem="rRl-zd-2zu" secondAttribute="leading" id="Ixs-A7-xcY"/>
-                            <constraint firstItem="BlZ-vN-t4D" firstAttribute="leading" secondItem="rRl-zd-2zu" secondAttribute="leading" id="Kg4-Lh-ZKD"/>
                             <constraint firstItem="qxW-Gw-fXc" firstAttribute="trailing" secondItem="rRl-zd-2zu" secondAttribute="trailing" id="aMJ-Rl-z3b"/>
-                            <constraint firstItem="BlZ-vN-t4D" firstAttribute="top" secondItem="7V4-TJ-lGw" secondAttribute="top" id="dsJ-Yf-svZ"/>
                             <constraint firstItem="BlZ-vN-t4D" firstAttribute="top" secondItem="7V4-TJ-lGw" secondAttribute="top" id="gcI-Jb-h2U"/>
                             <constraint firstItem="qxW-Gw-fXc" firstAttribute="top" secondItem="rRl-zd-2zu" secondAttribute="top" id="hHg-13-tre"/>
                             <constraint firstAttribute="bottom" secondItem="BlZ-vN-t4D" secondAttribute="bottom" id="iJA-RY-KFv"/>
@@ -162,7 +168,6 @@
                             <constraint firstItem="Tca-T9-jZ7" firstAttribute="centerX" secondItem="qxW-Gw-fXc" secondAttribute="centerX" id="lN9-qE-DJA"/>
                             <constraint firstItem="Tca-T9-jZ7" firstAttribute="top" secondItem="qxW-Gw-fXc" secondAttribute="bottom" constant="26" id="tMA-yO-Zu7"/>
                             <constraint firstItem="BlZ-vN-t4D" firstAttribute="trailing" secondItem="rRl-zd-2zu" secondAttribute="trailing" id="uuR-bn-uzB"/>
-                            <constraint firstAttribute="bottom" secondItem="BlZ-vN-t4D" secondAttribute="bottom" id="xcL-p3-6QA"/>
                             <constraint firstItem="qxW-Gw-fXc" firstAttribute="leading" secondItem="rRl-zd-2zu" secondAttribute="leading" id="zEn-rX-lPq"/>
                         </constraints>
                     </view>
@@ -174,12 +179,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pKD-tx-MVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1715.625" y="447.5"/>
+            <point key="canvasLocation" x="1714.4927536231885" y="447.32142857142856"/>
         </scene>
-        <!--Show Weather View Controller-->
+        <!--Weather-->
         <scene sceneID="Orm-Gy-jMP">
             <objects>
-                <viewController storyboardIdentifier="showWeather" id="EPo-kN-Xhi" customClass="ShowWeatherViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="showWeather" title="Weather" id="EPo-kN-Xhi" customClass="ShowWeatherViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="po6-8X-6Tj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

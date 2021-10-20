@@ -7,10 +7,10 @@
 
 import Foundation
 
-public struct Current: Decodable {
-    var lastUpdated: String
-    var tempC: Double
-    var tempF: Double
+public struct CurrentWeather: Decodable {
+    let lastUpdated: String
+    let tempC: Double
+    let tempF: Double
     
     enum CodingKeys: String, CodingKey {
         case lastUpdated = "last_updated"
@@ -18,11 +18,4 @@ public struct Current: Decodable {
         case tempF = "temp_f"
     }
     
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        
-        self.lastUpdated = try container.decode(String.self, forKey: .lastUpdated)
-        self.tempC = try container.decode(Double.self, forKey: .tempC)
-        self.tempF = try container.decode(Double.self, forKey: .tempF)
-    }
 }
