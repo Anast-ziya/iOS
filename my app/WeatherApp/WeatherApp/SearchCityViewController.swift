@@ -26,6 +26,8 @@ extension SearchCityViewController: UISearchBarDelegate {
     func initializeHideKeyboard(){
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissMyKeyboard))
         view.addGestureRecognizer(tap)
+        let swipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(dismissMyKeyboard))
+        view.addGestureRecognizer(swipe)
     }
     @objc func dismissMyKeyboard(){
         view.endEditing(true)
