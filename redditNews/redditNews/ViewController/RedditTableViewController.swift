@@ -34,9 +34,9 @@ class RedditTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RedditTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? RedditTableViewCell
+        guard let cell = cell else { return UITableViewCell() }
         let post = postController.redditData[indexPath.row]
-        
         cell.redditTextView.text = post.title
         loadImage(forCell: cell, forItemAt: indexPath, redditData: post)
         return cell
@@ -114,11 +114,14 @@ class RedditTableViewController: UITableViewController, UISearchBarDelegate {
     // do preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == cellToDetail {
-            let detailVC = segue.destination as! RedditViewController
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let redditData = postController.redditData[indexPath.row]
-                detailVC.redditData = redditData
+            let detailVC = segue.destination as? RedditViewController
+            if let detailVC = detailVC {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let redditData = postController.redditData[indexPath.row]
+                    detailVC.redditData = redditData
+                }
             }
+            
         }
     }
 }

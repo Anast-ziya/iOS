@@ -25,9 +25,12 @@ class RedditViewController: UIViewController {
     func updateViews() {
         guard isViewLoaded else { return }
         let urlString = redditData?.url
-        guard let url = URL(string: urlString!) else { return }
-        let request = URLRequest(url: url)
-        postWebView.load(request)
+        if let URLString = urlString {
+            guard let url = URL(string: URLString) else { return }
+            let request = URLRequest(url: url)
+            postWebView.load(request)
+        }
+        
     }
     
 }

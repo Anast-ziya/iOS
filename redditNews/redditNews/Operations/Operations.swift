@@ -11,7 +11,7 @@ import UIKit
 class ConcurrentOperation: Operation {
     
     enum State: String {
-        case isReady, isExecuting, isFinished
+        case isReady, isExecuting, isFinished, isFaild
     }
     
     private var _state = State.isReady
@@ -26,7 +26,8 @@ class ConcurrentOperation: Operation {
                 result = _state
             }
             
-            return result!
+            guard let result = result else { return .isFaild }
+            return result
         }
         set {
             let oldValue = state
