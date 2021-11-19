@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="customElement_Stack" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="jPv-Mg-3eX" id="vfJ-Sl-djZ"/>
+                <outlet property="imageOne" destination="FgG-Vs-2iw" id="f0K-KY-lVW"/>
+                <outlet property="imageTwo" destination="8bR-1n-490" id="flD-2P-2jH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="jPv-Mg-3eX">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat1" translatesAutoresizingMaskIntoConstraints="NO" id="FgG-Vs-2iw">
+                    <rect key="frame" x="0.0" y="0.0" width="158" height="260"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="260" id="1c1-m4-rFE"/>
+                        <constraint firstAttribute="width" constant="158" id="765-Vh-oP6"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat2" translatesAutoresizingMaskIntoConstraints="NO" id="8bR-1n-490">
+                    <rect key="frame" x="172" y="0.0" width="158" height="260"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="158" id="487-9r-kWG"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="260" id="cJg-KO-Teu"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="e8L-XE-3wu"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="8bR-1n-490" firstAttribute="trailing" secondItem="e8L-XE-3wu" secondAttribute="trailing" id="AXW-qR-7r2"/>
+                <constraint firstItem="8bR-1n-490" firstAttribute="bottom" secondItem="e8L-XE-3wu" secondAttribute="bottom" id="F2l-zN-76K"/>
+                <constraint firstItem="FgG-Vs-2iw" firstAttribute="top" secondItem="8bR-1n-490" secondAttribute="top" id="MSm-es-sWD"/>
+                <constraint firstItem="FgG-Vs-2iw" firstAttribute="bottom" secondItem="e8L-XE-3wu" secondAttribute="bottom" id="PCl-vd-BKI"/>
+                <constraint firstItem="8bR-1n-490" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FgG-Vs-2iw" secondAttribute="trailing" constant="14" id="SdI-bW-wW4"/>
+                <constraint firstItem="8bR-1n-490" firstAttribute="centerY" secondItem="jPv-Mg-3eX" secondAttribute="centerY" id="r0N-9M-36a"/>
+                <constraint firstItem="FgG-Vs-2iw" firstAttribute="leading" secondItem="e8L-XE-3wu" secondAttribute="leading" id="uE3-H4-oHJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="211.59420289855075" y="-13.392857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cat1" width="1000" height="1500"/>
+        <image name="cat2" width="1000" height="1333"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
