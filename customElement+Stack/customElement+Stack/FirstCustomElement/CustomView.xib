@@ -20,31 +20,30 @@
             <rect key="frame" x="0.0" y="0.0" width="330" height="260"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat1" translatesAutoresizingMaskIntoConstraints="NO" id="FgG-Vs-2iw">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" image="cat1" translatesAutoresizingMaskIntoConstraints="NO" id="FgG-Vs-2iw">
                     <rect key="frame" x="0.0" y="0.0" width="158" height="260"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="260" id="1c1-m4-rFE"/>
-                        <constraint firstAttribute="width" constant="158" id="765-Vh-oP6"/>
+                        <constraint firstAttribute="height" constant="260" id="8Jm-u5-ceL"/>
+                        <constraint firstAttribute="width" constant="158" id="8x5-dS-bWB"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat2" translatesAutoresizingMaskIntoConstraints="NO" id="8bR-1n-490">
                     <rect key="frame" x="172" y="0.0" width="158" height="260"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="158" id="487-9r-kWG"/>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="260" id="cJg-KO-Teu"/>
+                        <constraint firstAttribute="height" constant="260" id="JC6-hQ-VOm"/>
+                        <constraint firstAttribute="width" constant="158" id="U1J-9Q-VT1"/>
                     </constraints>
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="e8L-XE-3wu"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="8bR-1n-490" firstAttribute="trailing" secondItem="e8L-XE-3wu" secondAttribute="trailing" id="AXW-qR-7r2"/>
-                <constraint firstItem="8bR-1n-490" firstAttribute="bottom" secondItem="e8L-XE-3wu" secondAttribute="bottom" id="F2l-zN-76K"/>
-                <constraint firstItem="FgG-Vs-2iw" firstAttribute="top" secondItem="8bR-1n-490" secondAttribute="top" id="MSm-es-sWD"/>
-                <constraint firstItem="FgG-Vs-2iw" firstAttribute="bottom" secondItem="e8L-XE-3wu" secondAttribute="bottom" id="PCl-vd-BKI"/>
-                <constraint firstItem="8bR-1n-490" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FgG-Vs-2iw" secondAttribute="trailing" constant="14" id="SdI-bW-wW4"/>
-                <constraint firstItem="8bR-1n-490" firstAttribute="centerY" secondItem="jPv-Mg-3eX" secondAttribute="centerY" id="r0N-9M-36a"/>
-                <constraint firstItem="FgG-Vs-2iw" firstAttribute="leading" secondItem="e8L-XE-3wu" secondAttribute="leading" id="uE3-H4-oHJ"/>
+                <constraint firstItem="FgG-Vs-2iw" firstAttribute="top" secondItem="8bR-1n-490" secondAttribute="top" id="7eC-hA-meY"/>
+                <constraint firstItem="8bR-1n-490" firstAttribute="top" secondItem="jPv-Mg-3eX" secondAttribute="top" id="LTF-sn-OVG"/>
+                <constraint firstItem="8bR-1n-490" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FgG-Vs-2iw" secondAttribute="trailing" constant="14" id="MqT-c2-06m"/>
+                <constraint firstItem="8bR-1n-490" firstAttribute="bottom" secondItem="e8L-XE-3wu" secondAttribute="bottom" id="YNI-LZ-6Ft"/>
+                <constraint firstItem="FgG-Vs-2iw" firstAttribute="leading" secondItem="jPv-Mg-3eX" secondAttribute="leading" id="rwl-4N-scz"/>
+                <constraint firstAttribute="trailing" secondItem="8bR-1n-490" secondAttribute="trailing" id="zLy-pY-LFD"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="211.59420289855075" y="-13.392857142857142"/>

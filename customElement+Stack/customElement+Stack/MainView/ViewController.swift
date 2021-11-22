@@ -9,14 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var catPhotoView: CustomView!
-    @IBOutlet weak var labelCatPhotos: UILabel!
+    @IBOutlet private weak var catPhotoView: CustomView!
+    @IBOutlet private weak var labelView: SecondCustomView!
+    @IBOutlet private weak var labelCatPhotos: UILabel!
+    @IBOutlet weak var datePickerView: ThirdCustomView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
 }
 

@@ -15,6 +15,12 @@
 		5D07498A2747CA8B00D68073 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D0749882747CA8B00D68073 /* LaunchScreen.storyboard */; };
 		5D0749942747D54000D68073 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0749932747D54000D68073 /* CustomView.xib */; };
 		5D0749962747D6FA00D68073 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0749952747D6FA00D68073 /* CustomView.swift */; };
+		5DAE48DB27494F3A00C14974 /* SecondCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DAE48DA27494F3A00C14974 /* SecondCustomView.xib */; };
+		5DAE48DD27498A9600C14974 /* SecondCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE48DC27498A9500C14974 /* SecondCustomView.swift */; };
+		5DAE48DF27498CB200C14974 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE48DE27498CB200C14974 /* ExtensionUIView.swift */; };
+		5DAE48E2274AE91100C14974 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE48E1274AE91100C14974 /* Constants.swift */; };
+		5DAE48E6274AFA0300C14974 /* ThirdCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DAE48E5274AFA0300C14974 /* ThirdCustomView.xib */; };
+		5DAE48E8274AFA8900C14974 /* ThirdCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE48E7274AFA8900C14974 /* ThirdCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		5D07498B2747CA8B00D68073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D0749932747D54000D68073 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		5D0749952747D6FA00D68073 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		5DAE48DA27494F3A00C14974 /* SecondCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCustomView.xib; sourceTree = "<group>"; };
+		5DAE48DC27498A9500C14974 /* SecondCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCustomView.swift; sourceTree = "<group>"; };
+		5DAE48DE27498CB200C14974 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
+		5DAE48E1274AE91100C14974 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5DAE48E5274AFA0300C14974 /* ThirdCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdCustomView.xib; sourceTree = "<group>"; };
+		5DAE48E7274AFA8900C14974 /* ThirdCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +72,12 @@
 		5D07497C2747CA8800D68073 /* customElement+Stack */ = {
 			isa = PBXGroup;
 			children = (
+				5DAE48E3274AF69200C14974 /* Constants */,
+				5DAE48E027498DC500C14974 /* Extensions */,
 				5DAE48D92747F05D00C14974 /* MainView */,
-				5DAE48D82747E7BC00C14974 /* CustomElement */,
+				5DAE48D82747E7BC00C14974 /* FirstCustomElement */,
+				5DAE48E4274AF6A300C14974 /* SecondCustomView */,
+				5DAE48E9274B76A700C14974 /* ThirdCustomView */,
 				5D07497D2747CA8800D68073 /* AppDelegate.swift */,
 				5D07497F2747CA8800D68073 /* SceneDelegate.swift */,
 				5D0749862747CA8B00D68073 /* Assets.xcassets */,
@@ -71,13 +87,13 @@
 			path = "customElement+Stack";
 			sourceTree = "<group>";
 		};
-		5DAE48D82747E7BC00C14974 /* CustomElement */ = {
+		5DAE48D82747E7BC00C14974 /* FirstCustomElement */ = {
 			isa = PBXGroup;
 			children = (
-				5D0749932747D54000D68073 /* CustomView.xib */,
 				5D0749952747D6FA00D68073 /* CustomView.swift */,
+				5D0749932747D54000D68073 /* CustomView.xib */,
 			);
-			path = CustomElement;
+			path = FirstCustomElement;
 			sourceTree = "<group>";
 		};
 		5DAE48D92747F05D00C14974 /* MainView */ = {
@@ -87,6 +103,40 @@
 				5D0749832747CA8800D68073 /* Main.storyboard */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		5DAE48E027498DC500C14974 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5DAE48DE27498CB200C14974 /* ExtensionUIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5DAE48E3274AF69200C14974 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5DAE48E1274AE91100C14974 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		5DAE48E4274AF6A300C14974 /* SecondCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				5DAE48DC27498A9500C14974 /* SecondCustomView.swift */,
+				5DAE48DA27494F3A00C14974 /* SecondCustomView.xib */,
+			);
+			path = SecondCustomView;
+			sourceTree = "<group>";
+		};
+		5DAE48E9274B76A700C14974 /* ThirdCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				5DAE48E7274AFA8900C14974 /* ThirdCustomView.swift */,
+				5DAE48E5274AFA0300C14974 /* ThirdCustomView.xib */,
+			);
+			path = ThirdCustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +201,8 @@
 				5D0749942747D54000D68073 /* CustomView.xib in Resources */,
 				5D0749872747CA8B00D68073 /* Assets.xcassets in Resources */,
 				5D0749852747CA8800D68073 /* Main.storyboard in Resources */,
+				5DAE48DB27494F3A00C14974 /* SecondCustomView.xib in Resources */,
+				5DAE48E6274AFA0300C14974 /* ThirdCustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,8 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DAE48DF27498CB200C14974 /* ExtensionUIView.swift in Sources */,
+				5DAE48E8274AFA8900C14974 /* ThirdCustomView.swift in Sources */,
+				5DAE48DD27498A9600C14974 /* SecondCustomView.swift in Sources */,
 				5D0749822747CA8800D68073 /* ViewController.swift in Sources */,
 				5D0749962747D6FA00D68073 /* CustomView.swift in Sources */,
+				5DAE48E2274AE91100C14974 /* Constants.swift in Sources */,
 				5D07497E2747CA8800D68073 /* AppDelegate.swift in Sources */,
 				5D0749802747CA8800D68073 /* SceneDelegate.swift in Sources */,
 			);
