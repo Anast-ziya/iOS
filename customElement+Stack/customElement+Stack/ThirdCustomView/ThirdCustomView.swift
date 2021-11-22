@@ -10,9 +10,9 @@ import UIKit
 
 class ThirdCustomView: UIView {
 
-    @IBOutlet private var thirdCustomView: UIView!
-    @IBOutlet private weak var selectDateLabel: UILabel!
-    @IBOutlet private weak var datePicker: UIDatePicker!
+    @IBOutlet var thirdCustomView: UIView!
+    @IBOutlet weak var selectDateLabel: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     // for using SecondCustomView in code
     public required init?(coder aDecoder: NSCoder) {

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="6Hm-u7-C65">
-                                <rect key="frame" x="15" y="56" width="384" height="807"/>
+                                <rect key="frame" x="15" y="56" width="384" height="840"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOj-U6-ChK">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="41"/>
@@ -27,15 +27,15 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zW-d9-8am" customClass="SecondCustomView" customModule="customElement_Stack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="70" width="384" height="70"/>
+                                        <rect key="frame" x="0.0" y="70" width="384" height="131"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9o-oW-mnU" customClass="ThirdCustomView" customModule="customElement_Stack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="169" width="384" height="313"/>
+                                        <rect key="frame" x="0.0" y="230" width="384" height="321"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGY-49-fH4" customClass="CustomView" customModule="customElement_Stack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="511" width="384" height="296"/>
+                                        <rect key="frame" x="0.0" y="580" width="384" height="260"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -45,6 +45,7 @@
                         <viewLayoutGuide key="safeArea" id="qec-Tm-iU2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6Hm-u7-C65" secondAttribute="bottom" id="Kdd-Ir-dez"/>
                             <constraint firstItem="6Hm-u7-C65" firstAttribute="leading" secondItem="qec-Tm-iU2" secondAttribute="leading" constant="15" id="SWo-ax-Vsa"/>
                             <constraint firstItem="qec-Tm-iU2" firstAttribute="trailing" secondItem="6Hm-u7-C65" secondAttribute="trailing" constant="15" id="aM6-AK-DVv"/>
                             <constraint firstItem="6Hm-u7-C65" firstAttribute="top" secondItem="qec-Tm-iU2" secondAttribute="top" constant="12" id="cNp-9w-SGe"/>
