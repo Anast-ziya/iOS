@@ -21,6 +21,7 @@
 		5DAE48E2274AE91100C14974 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE48E1274AE91100C14974 /* Constants.swift */; };
 		5DAE48E6274AFA0300C14974 /* ThirdCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DAE48E5274AFA0300C14974 /* ThirdCustomView.xib */; };
 		5DAE48E8274AFA8900C14974 /* ThirdCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE48E7274AFA8900C14974 /* ThirdCustomView.swift */; };
+		5DAE48EB274D567800C14974 /* ExtencionNSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE48EA274D567800C14974 /* ExtencionNSLayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5DAE48E1274AE91100C14974 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5DAE48E5274AFA0300C14974 /* ThirdCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdCustomView.xib; sourceTree = "<group>"; };
 		5DAE48E7274AFA8900C14974 /* ThirdCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCustomView.swift; sourceTree = "<group>"; };
+		5DAE48EA274D567800C14974 /* ExtencionNSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtencionNSLayoutConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				5DAE48DE27498CB200C14974 /* ExtensionUIView.swift */,
+				5DAE48EA274D567800C14974 /* ExtencionNSLayoutConstraint.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				5DAE48E8274AFA8900C14974 /* ThirdCustomView.swift in Sources */,
 				5DAE48DD27498A9600C14974 /* SecondCustomView.swift in Sources */,
 				5D0749822747CA8800D68073 /* ViewController.swift in Sources */,
+				5DAE48EB274D567800C14974 /* ExtencionNSLayoutConstraint.swift in Sources */,
 				5D0749962747D6FA00D68073 /* CustomView.swift in Sources */,
 				5DAE48E2274AE91100C14974 /* Constants.swift in Sources */,
 				5D07497E2747CA8800D68073 /* AppDelegate.swift in Sources */,
