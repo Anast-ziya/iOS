@@ -19,14 +19,14 @@
         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="433" height="137"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Here we use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHQ-xY-Chl">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="251" text="Here we use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHQ-xY-Chl">
                     <rect key="frame" x="0.0" y="46" width="132" height="55"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Auto Layout Content Hugging Priority" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDY-um-pt0">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="250" text="Auto Layout Content Hugging Priority" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDY-um-pt0">
                     <rect key="frame" x="149" y="46" width="284" height="55"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -39,9 +39,9 @@
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eHQ-xY-Chl" secondAttribute="bottom" constant="2" identifier="id1" id="If2-LN-3W6"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="MDY-um-pt0" secondAttribute="bottom" constant="2" identifier="id2" id="aQG-0T-avG"/>
-                <constraint firstItem="MDY-um-pt0" firstAttribute="leading" secondItem="eHQ-xY-Chl" secondAttribute="trailing" constant="17" identifier="id6" id="hHm-Fk-elX"/>
+                <constraint firstItem="MDY-um-pt0" firstAttribute="leading" secondItem="eHQ-xY-Chl" secondAttribute="trailing" priority="999" constant="17" identifier="id6" id="hHm-Fk-elX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MDY-um-pt0" secondAttribute="trailing" identifier="id3" id="kdY-6p-lTQ"/>
-                <constraint firstItem="eHQ-xY-Chl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" priority="999" identifier="id4" id="niw-Av-5ea"/>
+                <constraint firstItem="eHQ-xY-Chl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yQ8-0K-YrU"/>
                 <constraint firstItem="MDY-um-pt0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="2" identifier="id7" id="ygH-5W-nfc"/>
                 <constraint firstItem="eHQ-xY-Chl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="2" identifier="id5" id="zvI-bt-2Au"/>
             </constraints>

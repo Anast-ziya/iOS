@@ -20,22 +20,22 @@
                                 <rect key="frame" x="15" y="56" width="384" height="840"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOj-U6-ChK">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="71"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zW-d9-8am" customClass="SecondCustomView" customModule="customElement_Stack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="70" width="384" height="131"/>
+                                        <rect key="frame" x="0.0" y="100" width="384" height="126"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9o-oW-mnU" customClass="ThirdCustomView" customModule="customElement_Stack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="230" width="384" height="321"/>
+                                        <rect key="frame" x="0.0" y="255" width="384" height="308.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGY-49-fH4" customClass="CustomView" customModule="customElement_Stack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="580" width="384" height="260"/>
+                                        <rect key="frame" x="0.0" y="592.5" width="384" height="247.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
