@@ -1,14 +1,14 @@
 //
-//  AddWaterViewController.swift
+//  DeleteProgressViewController.swift
 //  WaterReminder
 //
-//  Created by Anastasia Burak on 12.11.21.
+//  Created by Anastasia Burak on 28.11.21.
 //
 
 import UIKit
 
-class AddWaterViewController: UIViewController {
-    
+class DeleteProgressViewController: UIViewController {
+
     @IBOutlet private weak var selectDrinkLabel: UILabel!
     @IBOutlet private weak var listOfDrinks: UIPickerView!
     @IBOutlet private weak var waterAmountLabel: UILabel!
@@ -17,7 +17,6 @@ class AddWaterViewController: UIViewController {
     
     
     var list = ["Water", "Tea", "Coffee", "Milk"]
-    var selectedDrink: String = ""
     private let unitIsMetric = PreferencesManager.shared.currentUserPrefrences?.unit == .metric
     private var amountOfWater: Int {
         var valueFromWaterSlider = waterSlider.value
@@ -50,10 +49,16 @@ class AddWaterViewController: UIViewController {
         waterAmountLabel.text = "\(amountOfWater)"
     }
     
-    @IBAction private func addWaterTapped() {
+    @IBAction private func deleteWaterTapped() {
         guard let unit = PreferencesManager.shared.currentUserPrefrences?.unit else { return }
         let amountOfWaterInMl = PreferencesManager.shared.waterUnitConverter(waterAmount: amountOfWater, currentUnit: unit)
-        WaterManager.shared.add(glassOfWater: GlassOfWater(amount: amountOfWaterInMl))
+        let residuum = Int(WaterManager.shared.todaysWaterCondsumption) - amountOfWaterInMl
+        
+        if residuum >= 0 {
+            WaterManager.shared.add(glassOfWater: GlassOfWater(amount: -amountOfWaterInMl))
+        } else {
+            WaterManager.shared.add(glassOfWater: GlassOfWater(amount: (-amountOfWaterInMl - residuum)))
+        }
         dismiss(animated: true)
     }
     
@@ -62,7 +67,7 @@ class AddWaterViewController: UIViewController {
     }
 }
 
-extension AddWaterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension DeleteProgressViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -77,10 +82,7 @@ extension AddWaterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
         self.selectDrinkLabel.text = self.list[row]
-        selectedDrink = list[row]
-        
     }
     
 }

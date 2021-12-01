@@ -18,6 +18,7 @@ final class WelcomeScreenViewController: UIViewController {
     @IBOutlet private weak var getStartedButton: UIButton!
     @IBOutlet private weak var userPreferencesInfoLabel: UILabel!
     @IBOutlet private weak var infoLabel: UILabel!
+    @IBOutlet private weak var welcomeToLabel: UILabel!
     
     enum Step: Int, CaseIterable {
         case welcome
@@ -60,6 +61,10 @@ final class WelcomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        welcomeToLabel.adjustsFontSizeToFitWidth = true
+        welcomeToLabel.minimumScaleFactor = 0.5
+        
+        nextButton.layer.cornerRadius = nextButton.bounds.size.height / 2.0
         pickerView.layer.cornerRadius = 30
         
         progressView.transform = progressView.transform.scaledBy(x: 1, y: 2.5)

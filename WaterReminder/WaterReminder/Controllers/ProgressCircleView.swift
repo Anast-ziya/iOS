@@ -38,6 +38,11 @@ class ProgressCircleView: UIView {
         layer.addSublayer(shapeLayer)
     }
     
+    func deleteProgress() {
+        shapeLayer.removeAnimation(forKey: "progressAnimation")
+        
+    }
+    
     func progressAnimation(duration: TimeInterval) {
         let newProgress = WaterManager.shared.goalsProgress ?? 0
         

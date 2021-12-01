@@ -90,10 +90,10 @@ final class PreferencesManager {
         let unit = currentUserPrefrences.unit
         
         if unit == .metric {
-            return "\(waterConsumptionGoal) ml"
+            return "\(waterConsumptionGoal)"
         } else {
             let milliliterToOunce = Int(Float(waterConsumptionGoal) * 0.0338)
-            return "\(milliliterToOunce) Oz"
+            return "\(milliliterToOunce)"
         }
     }
     

@@ -8,6 +8,13 @@
 import UIKit
 import Foundation
 
+enum Picker: Int {
+       case unit
+       case weightKg
+       case weightIbs
+       case age
+       case activityLevel
+   }
 
 protocol UnitChangedDelegate: AnyObject {
     func unitChanged()
@@ -16,6 +23,7 @@ protocol UnitChangedDelegate: AnyObject {
 class SettingsTableViewController: UITableViewController {
     
     @IBOutlet private weak var unitPickerView: UIPickerView!
+    @IBOutlet private weak var switchState: UISwitch!
     @IBOutlet private weak var weightPickerViewKg: UIPickerView!
     @IBOutlet private weak var weightPickerViewIbs: UIPickerView!
     @IBOutlet private weak var agePickerView: UIPickerView!
@@ -32,6 +40,7 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        switchState.isOn = UserDefaults.standard.bool(forKey: "switchStatus")
         self.unitPickerView.delegate = self
         self.weightPickerViewKg.delegate = self
         self.weightPickerViewIbs.delegate = self
@@ -45,14 +54,6 @@ class SettingsTableViewController: UITableViewController {
         activityLevelPickerView.tag = Picker.activityLevel.rawValue
         
         updateUI()
-    }
-    
-    enum Picker: Int {
-        case unit
-        case weightKg
-        case weightIbs
-        case age
-        case activityLevel
     }
     
     private func updateUI() {
@@ -100,27 +101,33 @@ class SettingsTableViewController: UITableViewController {
         IndexPath(row: indexPath.row + 1, section: indexPath.section)
     }
     
-    @IBAction func SetButtonWasPressed(_ sender: Any) {
+    @IBAction private func switchDidChange(_ sender: UISwitch) {
         let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert,.badge,.sound]) { grandted, error in
-            if grandted {
-                self.showAlert("Great!", "You will get notifications, which will remind you to drink more!")
-            } else {
-                self.showAlert("Error", "Please allow sending notifications in your phone settings")
+        if sender.isOn {
+            center.requestAuthorization(options: [.alert,.badge,.sound]) { grandted, error in
+                if grandted {
+                    self.showAlert("Great!", "You will get notifications, which will remind you to drink more!")
+                } else {
+                    self.showAlert("Error", "Please allow sending notifications in your phone settings")
+                }
             }
+            let content = UNMutableNotificationContent()
+            content.title = "Are you there?"
+            content.body = "This Is your body speaking. Don't forget to drink water or something like this!"
+            content.sound = .default
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            center.add(request)
+        } else {
+            showAlert("It's a pity :(", "You will not get notifications more. But don't forget to drink!")
+            center.removeAllPendingNotificationRequests()
         }
-        
-        center.removeAllPendingNotificationRequests()
-        
-        let content = UNMutableNotificationContent()
-        content.title = "Are you there?"
-        content.body = "This Is your body speaking. Don't forget to drink water or something like this!"
-        content.sound = .default
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3600, repeats: true)
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        center.add(request)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            UserDefaults.standard.set(switchState.isOn, forKey: "switchStatus")
+        }
 }
 
 //MARK: - UIPickerView setup

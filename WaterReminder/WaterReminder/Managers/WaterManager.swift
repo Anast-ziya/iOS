@@ -36,13 +36,16 @@ final class WaterManager {
     }
     
     var goalsProgress: Float? {
-        let waterGoal = PreferencesManager.shared.waterConsumptionGoal
-        let progress = Float(todaysWaterCondsumption) / Float(waterGoal)
-        
-        if progress > 1 {
-            return 1
-        } else {
-            return progress
+        get {
+            let waterGoal = PreferencesManager.shared.waterConsumptionGoal
+            let progress = Float(todaysWaterCondsumption) / Float(waterGoal)
+            if progress > 1 {
+                return 1
+            } else  if progress < 0 {
+                return 0
+            } else {
+                return progress
+            }
         }
     }
     
