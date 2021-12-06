@@ -19,31 +19,33 @@
         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="433" height="137"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="251" text="Here we use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHQ-xY-Chl">
-                    <rect key="frame" x="0.0" y="46" width="132" height="55"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="250" text="Auto Layout Content Hugging Priority" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDY-um-pt0">
-                    <rect key="frame" x="149" y="46" width="284" height="55"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MuE-9q-nQE">
+                    <rect key="frame" x="0.0" y="44" width="433" height="59"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="251" text="Here we use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHQ-xY-Chl">
+                            <rect key="frame" x="0.0" y="0.0" width="105.5" height="59"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="250" text="Auto Layout Content Hugging Priority" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDY-um-pt0">
+                            <rect key="frame" x="115.5" y="0.0" width="317.5" height="59"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eHQ-xY-Chl" secondAttribute="bottom" constant="2" identifier="id1" id="If2-LN-3W6"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="MDY-um-pt0" secondAttribute="bottom" constant="2" identifier="id2" id="aQG-0T-avG"/>
-                <constraint firstItem="MDY-um-pt0" firstAttribute="leading" secondItem="eHQ-xY-Chl" secondAttribute="trailing" priority="999" constant="17" identifier="id6" id="hHm-Fk-elX"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MDY-um-pt0" secondAttribute="trailing" identifier="id3" id="kdY-6p-lTQ"/>
-                <constraint firstItem="eHQ-xY-Chl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yQ8-0K-YrU"/>
-                <constraint firstItem="MDY-um-pt0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="2" identifier="id7" id="ygH-5W-nfc"/>
-                <constraint firstItem="eHQ-xY-Chl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="2" identifier="id5" id="zvI-bt-2Au"/>
+                <constraint firstItem="MuE-9q-nQE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" identifier="id112" id="31S-93-f9s"/>
+                <constraint firstAttribute="trailing" secondItem="MuE-9q-nQE" secondAttribute="trailing" priority="999" identifier="id113" id="VAs-A5-def"/>
+                <constraint firstItem="MuE-9q-nQE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" identifier="id114" id="eBq-VL-6aW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="MuE-9q-nQE" secondAttribute="bottom" identifier="id111" id="oyJ-d1-JJL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="151.44927536231884" y="-140.29017857142856"/>
