@@ -53,6 +53,10 @@ final class HomeViewController: UIViewController {
         updateUI()
     }
     
+    @IBAction func deleteLastWasPressed(_ sender: UIButton) {
+        WaterManager.shared.deleteLast()
+    }
+    
     //update the UI to display the daily water consumption
     func updateUI() {
         guard var goalsProgress = WaterManager.shared.goalsProgress else { return }

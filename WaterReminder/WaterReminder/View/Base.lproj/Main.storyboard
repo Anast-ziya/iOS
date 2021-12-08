@@ -262,12 +262,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityLabel" destination="t4D-sE-5FB" id="ywZ-4M-vsq"/>
+                        <outlet property="activityLevelCell" destination="efr-9r-c1s" id="DYR-Qq-1zw"/>
                         <outlet property="activityLevelPickerView" destination="9ya-pb-FHq" id="0sz-Rg-QAy"/>
+                        <outlet property="ageCell" destination="zss-9o-FPh" id="dm5-hI-2xN"/>
                         <outlet property="ageLabel" destination="ewZ-aq-J8K" id="ffs-Gl-rAF"/>
                         <outlet property="agePickerView" destination="PRi-Gi-8sI" id="q4z-oy-SP9"/>
+                        <outlet property="notificationCell" destination="jt1-Ah-rgk" id="pra-LZ-kd9"/>
                         <outlet property="switchState" destination="XvZ-Z2-Wmf" id="qgx-vs-sKa"/>
                         <outlet property="unitLabel" destination="ypS-Ll-K18" id="QGB-Ot-3go"/>
                         <outlet property="unitPickerView" destination="iY9-9w-aXM" id="wx6-yX-jiv"/>
+                        <outlet property="unitsCell" destination="iPa-lo-8CG" id="Qo2-1C-V7J"/>
+                        <outlet property="weightCell" destination="wJo-s7-i40" id="h9m-vT-mnf"/>
                         <outlet property="weightLabel" destination="ddg-6H-Wdp" id="KDz-hf-6Lb"/>
                         <outlet property="weightPickerViewIbs" destination="wzh-AX-i9S" id="Cce-MF-Ms2"/>
                         <outlet property="weightPickerViewKg" destination="0HJ-V2-M3m" id="iwr-TI-mBz"/>
@@ -429,137 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooJ-GM-DF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-591" y="1258"/>
-        </scene>
-        <!--Delete Progress View Controller-->
-        <scene sceneID="Wka-ZE-HBl">
-            <objects>
-                <viewController id="PN9-sI-s41" customClass="DeleteProgressViewController" customModule="WaterReminder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ktL-xd-0gg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppN-fU-lfq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                                <items>
-                                    <navigationItem title="Delete Progress" id="mxx-uy-d5a">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BWh-Fu-0N2">
-                                            <color key="tintColor" systemColor="labelColor"/>
-                                            <connections>
-                                                <action selector="cancelButtonTapped:" destination="PN9-sI-s41" id="V5s-L4-f20"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="TNN-5p-5za">
-                                <rect key="frame" x="20" y="94" width="378" height="82"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="3WL-JG-i7u"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="PN9-sI-s41" id="Jst-ki-AAx"/>
-                                    <outlet property="delegate" destination="PN9-sI-s41" id="FlS-n1-EMy"/>
-                                </connections>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Drink" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByS-bc-VtU">
-                                <rect key="frame" x="97" y="56" width="224" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mej-NC-D7f">
-                                <rect key="frame" x="0.0" y="184" width="414" height="207"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIH-qn-KkK">
-                                        <rect key="frame" x="42" y="30" width="330" height="147"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOR-kM-DXG">
-                                                <rect key="frame" x="124" y="20" width="91" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ml" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBH-hb-Xh8">
-                                                <rect key="frame" x="223.5" y="40" width="78.5" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="pAb-Vq-mdz">
-                                                <rect key="frame" x="-2" y="96" width="334" height="31"/>
-                                                <color key="tintColor" systemColor="systemOrangeColor"/>
-                                                <connections>
-                                                    <action selector="waterSliderChanged:" destination="PN9-sI-s41" eventType="valueChanged" id="Ob7-wg-rNc"/>
-                                                </connections>
-                                            </slider>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="pAb-Vq-mdz" secondAttribute="bottom" constant="21" id="2uC-ip-nwi"/>
-                                            <constraint firstItem="pAb-Vq-mdz" firstAttribute="top" secondItem="NOR-kM-DXG" secondAttribute="bottom" constant="16" id="6jt-E3-IKD"/>
-                                            <constraint firstItem="pAb-Vq-mdz" firstAttribute="top" secondItem="RBH-hb-Xh8" secondAttribute="bottom" constant="20" id="PIj-Rz-qST"/>
-                                            <constraint firstItem="pAb-Vq-mdz" firstAttribute="leading" secondItem="RIH-qn-KkK" secondAttribute="leading" id="Tin-xW-eBa"/>
-                                            <constraint firstItem="RBH-hb-Xh8" firstAttribute="leading" secondItem="NOR-kM-DXG" secondAttribute="trailing" constant="8.5" id="Two-UP-HBc"/>
-                                            <constraint firstAttribute="trailing" secondItem="pAb-Vq-mdz" secondAttribute="trailing" id="Xam-5V-5vV"/>
-                                            <constraint firstAttribute="trailing" secondItem="RBH-hb-Xh8" secondAttribute="trailing" constant="28" id="aLt-s1-1IN"/>
-                                            <constraint firstItem="RBH-hb-Xh8" firstAttribute="top" secondItem="RIH-qn-KkK" secondAttribute="top" constant="40" id="oOB-pR-fcs"/>
-                                            <constraint firstItem="pAb-Vq-mdz" firstAttribute="centerX" secondItem="NOR-kM-DXG" secondAttribute="centerX" constant="-4.5" id="urq-IO-J4d"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="RIH-qn-KkK" firstAttribute="centerY" secondItem="Mej-NC-D7f" secondAttribute="centerY" id="3aQ-dd-Rha"/>
-                                    <constraint firstItem="RIH-qn-KkK" firstAttribute="leading" secondItem="Mej-NC-D7f" secondAttribute="leading" constant="42" id="68L-bC-EXv"/>
-                                    <constraint firstItem="RIH-qn-KkK" firstAttribute="centerX" secondItem="Mej-NC-D7f" secondAttribute="centerX" id="S60-kk-5PL"/>
-                                    <constraint firstItem="RIH-qn-KkK" firstAttribute="top" secondItem="Mej-NC-D7f" secondAttribute="top" constant="30" id="o0Z-b3-G7M"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSu-A3-QYK">
-                                <rect key="frame" x="42" y="757" width="330" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="AHX-0J-mfT"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Delete" subtitle="" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="SFProRounded-Medium" family="SF Pro Rounded" pointSize="24"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="deleteWaterTapped" destination="PN9-sI-s41" eventType="touchUpInside" id="D1z-WO-RGR"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="aQ8-fh-exi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="aQ8-fh-exi" firstAttribute="bottom" secondItem="RSu-A3-QYK" secondAttribute="bottom" constant="14" id="09W-WD-fxO"/>
-                            <constraint firstItem="ppN-fU-lfq" firstAttribute="leading" secondItem="aQ8-fh-exi" secondAttribute="leading" id="0js-5a-Zc5"/>
-                            <constraint firstItem="ppN-fU-lfq" firstAttribute="centerX" secondItem="ktL-xd-0gg" secondAttribute="centerX" id="8Ab-jQ-AUq"/>
-                            <constraint firstItem="TNN-5p-5za" firstAttribute="top" secondItem="ByS-bc-VtU" secondAttribute="bottom" constant="8" symbolic="YES" id="8Sa-vm-TEj"/>
-                            <constraint firstItem="RSu-A3-QYK" firstAttribute="leading" secondItem="aQ8-fh-exi" secondAttribute="leading" constant="42" id="CTS-zH-29V"/>
-                            <constraint firstItem="ppN-fU-lfq" firstAttribute="top" secondItem="aQ8-fh-exi" secondAttribute="top" id="D64-Vd-6i1"/>
-                            <constraint firstItem="TNN-5p-5za" firstAttribute="leading" secondItem="ktL-xd-0gg" secondAttribute="leadingMargin" id="HPW-ss-dGJ"/>
-                            <constraint firstItem="ppN-fU-lfq" firstAttribute="trailing" secondItem="aQ8-fh-exi" secondAttribute="trailing" id="Nlx-9n-TTq"/>
-                            <constraint firstItem="ByS-bc-VtU" firstAttribute="top" secondItem="ppN-fU-lfq" secondAttribute="bottom" id="RNN-v6-OZX"/>
-                            <constraint firstItem="aQ8-fh-exi" firstAttribute="trailing" secondItem="TNN-5p-5za" secondAttribute="trailing" constant="16" id="S4o-1Q-XA8"/>
-                            <constraint firstItem="TNN-5p-5za" firstAttribute="centerX" secondItem="ByS-bc-VtU" secondAttribute="centerX" id="b6e-xY-gDz"/>
-                            <constraint firstAttribute="trailing" secondItem="Mej-NC-D7f" secondAttribute="trailing" id="fy0-kW-hEv"/>
-                            <constraint firstItem="Mej-NC-D7f" firstAttribute="leading" secondItem="ppN-fU-lfq" secondAttribute="leading" id="mKc-5x-75G"/>
-                            <constraint firstItem="Mej-NC-D7f" firstAttribute="top" secondItem="TNN-5p-5za" secondAttribute="bottom" constant="8" symbolic="YES" id="mX0-cZ-9Ha"/>
-                            <constraint firstItem="aQ8-fh-exi" firstAttribute="trailing" secondItem="ByS-bc-VtU" secondAttribute="trailing" constant="93" id="tpF-sf-xhc"/>
-                            <constraint firstItem="RSu-A3-QYK" firstAttribute="centerX" secondItem="Mej-NC-D7f" secondAttribute="centerX" id="uu1-zW-Pth"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="listOfDrinks" destination="TNN-5p-5za" id="eOx-w5-zoE"/>
-                        <outlet property="selectDrinkLabel" destination="ByS-bc-VtU" id="YRw-Ul-PqK"/>
-                        <outlet property="unitLabel" destination="RBH-hb-Xh8" id="1Qu-gL-V5M"/>
-                        <outlet property="waterAmountLabel" destination="NOR-kM-DXG" id="OXH-WG-ccA"/>
-                        <outlet property="waterSlider" destination="pAb-Vq-mdz" id="FEO-5p-Xuj"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pEV-kz-PeG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="264" y="1280"/>
+            <point key="canvasLocation" x="-213" y="1137"/>
         </scene>
         <!--Add Water View Controller-->
         <scene sceneID="yVY-N8-XBS">
@@ -622,7 +497,6 @@
                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
                                                         <connections>
                                                             <action selector="waterSliderChanged:" destination="0LG-Fg-lHh" eventType="valueChanged" id="Kl1-0b-0LD"/>
-                                                            <action selector="waterSliderChanged:" destination="PN9-sI-s41" eventType="valueChanged" id="rfT-iS-Oy9"/>
                                                         </connections>
                                                     </slider>
                                                 </subviews>
@@ -660,7 +534,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="addWaterTapped" destination="0LG-Fg-lHh" eventType="touchUpInside" id="fPn-ni-YY6"/>
-                                            <action selector="deleteWaterTapped" destination="PN9-sI-s41" eventType="touchUpInside" id="70l-Ga-P5k"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -699,7 +572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IuD-Fa-jvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072" y="1280"/>
+            <point key="canvasLocation" x="686.95652173913049" y="1135.7142857142856"/>
         </scene>
         <!--WaterReminder-->
         <scene sceneID="M3Y-Jc-2DD">
@@ -831,20 +704,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrF-e5-mHl">
-                                <rect key="frame" x="57" y="802" width="137.5" height="40"/>
+                                <rect key="frame" x="57" y="802" width="124" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" identifier="id21" id="1cO-e9-blb"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="124" identifier="id22" id="mqs-LT-mU7"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Delete Water" subtitle="" cornerStyle="large">
+                                <buttonConfiguration key="configuration" style="filled" title="Delete Last" subtitle="" cornerStyle="large">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" red="0.94509804249999996" green="0.60392159219999997" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="PN9-sI-s41" kind="presentation" id="jYY-d8-CaH"/>
+                                    <action selector="deleteLastWasPressed:" destination="Umc-8o-KrM" eventType="touchUpInside" id="g8s-te-14X"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -874,7 +747,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="WaterReminder" id="t0i-qV-JAr">
                         <barButtonItem key="rightBarButtonItem" image="gearshape.fill" catalog="system" id="MSc-uC-v63">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="BzV-3t-PKr" kind="show" id="wm5-AE-ahj"/>
                             </connections>

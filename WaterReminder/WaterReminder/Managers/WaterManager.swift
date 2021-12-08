@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol WaterManagerDelegate: AnyObject {
     func waterHistoryChanged()
@@ -47,6 +48,17 @@ final class WaterManager {
                 return progress
             }
         }
+    }
+    
+    func deleteLast() {
+        if currentWaterConsumption.history.isEmpty {
+            print("There is no item in array")
+        } else {
+            currentWaterConsumption.history.removeLast()
+            store.waterConsumption = currentWaterConsumption
+            delegate?.waterHistoryChanged()
+        }
+        
     }
     
     func add(glassOfWater: GlassOfWater) {

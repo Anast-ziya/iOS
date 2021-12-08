@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5D07496C2745671800D68073 /* ExtensionSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D07496B2745671800D68073 /* ExtensionSettingsViewController.swift */; };
-		5D263B712753BD97003A6FBB /* DeleteProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D263B702753BD97003A6FBB /* DeleteProgressViewController.swift */; };
 		5D263B732754167D003A6FBB /* ExtensionNSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D263B722754167D003A6FBB /* ExtensionNSLayoutConstraint.swift */; };
+		5D263B7527580DD5003A6FBB /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D263B7427580DD5003A6FBB /* NotificationSettings.swift */; };
 		5D702D05273D27E9002662C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D702D04273D27E9002662C3 /* AppDelegate.swift */; };
 		5D702D07273D27E9002662C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D702D06273D27E9002662C3 /* SceneDelegate.swift */; };
 		5D702D09273D27E9002662C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D702D08273D27E9002662C3 /* HomeViewController.swift */; };
@@ -31,8 +31,8 @@
 
 /* Begin PBXFileReference section */
 		5D07496B2745671800D68073 /* ExtensionSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionSettingsViewController.swift; sourceTree = "<group>"; };
-		5D263B702753BD97003A6FBB /* DeleteProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProgressViewController.swift; sourceTree = "<group>"; };
 		5D263B722754167D003A6FBB /* ExtensionNSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionNSLayoutConstraint.swift; sourceTree = "<group>"; };
+		5D263B7427580DD5003A6FBB /* NotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
 		5D702D01273D27E9002662C3 /* WaterReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D702D04273D27E9002662C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D702D06273D27E9002662C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +132,7 @@
 				5D79766F2740294A00F98302 /* UserPrefrences.swift */,
 				5D79766D2740293700F98302 /* ActivityLevel.swift */,
 				5D79766B2740292700F98302 /* Unit.swift */,
+				5D263B7427580DD5003A6FBB /* NotificationSettings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,7 +144,6 @@
 				5D797667274028EB00F98302 /* WelcomeScreenViewController.swift */,
 				5D79767C2741EDE000F98302 /* SettingsTableViewController.swift */,
 				5D9C86052741FD8E004FFB0F /* AddWaterViewController.swift */,
-				5D263B702753BD97003A6FBB /* DeleteProgressViewController.swift */,
 				5D79767A2741EBD300F98302 /* ProgressCircleView.swift */,
 			);
 			path = Controllers;
@@ -228,7 +228,6 @@
 				5D263B732754167D003A6FBB /* ExtensionNSLayoutConstraint.swift in Sources */,
 				5D07496C2745671800D68073 /* ExtensionSettingsViewController.swift in Sources */,
 				5D79767527402A4A00F98302 /* DailyWaterConsumption.swift in Sources */,
-				5D263B712753BD97003A6FBB /* DeleteProgressViewController.swift in Sources */,
 				5D702D09273D27E9002662C3 /* HomeViewController.swift in Sources */,
 				5D7976792741E87B00F98302 /* WaterManager.swift in Sources */,
 				5D79766A2740291900F98302 /* PreferencesManager.swift in Sources */,
@@ -238,6 +237,7 @@
 				5D702D07273D27E9002662C3 /* SceneDelegate.swift in Sources */,
 				5D79767D2741EDE000F98302 /* SettingsTableViewController.swift in Sources */,
 				5D7976702740294A00F98302 /* UserPrefrences.swift in Sources */,
+				5D263B7527580DD5003A6FBB /* NotificationSettings.swift in Sources */,
 				5D797668274028EB00F98302 /* WelcomeScreenViewController.swift in Sources */,
 				5D79766E2740293700F98302 /* ActivityLevel.swift in Sources */,
 			);

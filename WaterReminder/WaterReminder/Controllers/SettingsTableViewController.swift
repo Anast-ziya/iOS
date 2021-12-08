@@ -33,12 +33,23 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet private weak var weightLabel: UILabel!
     @IBOutlet private weak var ageLabel: UILabel!
     @IBOutlet private weak var activityLabel: UILabel!
-    
+    @IBOutlet private weak var notificationCell: UITableViewCell!
+    @IBOutlet private weak var unitsCell: UITableViewCell!
+    @IBOutlet private weak var weightCell: UITableViewCell!
+    @IBOutlet private weak var ageCell: UITableViewCell!
+    @IBOutlet private weak var activityLevelCell: UITableViewCell!
+
     private let preferencesManager = PreferencesManager.shared
     weak var delegate: UnitChangedDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        notificationCell.selectionStyle = .none
+        unitsCell.selectionStyle = .none
+        weightCell.selectionStyle = .none
+        ageCell.selectionStyle = .none
+        activityLevelCell.selectionStyle = .none
         
         switchState.isOn = UserDefaults.standard.bool(forKey: "switchStatus")
         self.unitPickerView.delegate = self
@@ -102,26 +113,27 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction private func switchDidChange(_ sender: UISwitch) {
-        let center = UNUserNotificationCenter.current()
+        self.view.isUserInteractionEnabled = false
+        let notifications = Notification()
         if sender.isOn {
-            center.requestAuthorization(options: [.alert,.badge,.sound]) { grandted, error in
-                if grandted {
-                    self.showAlert("Great!", "You will get notifications, which will remind you to drink more!")
+             notifications.setPermission { userPermission in
+                if userPermission {
+                    DispatchQueue.main.async {
+                        sender.isOn = true
+                        self.showAlert("Great!", "You will get notifications")
+                    }
                 } else {
-                    self.showAlert("Error", "Please allow sending notifications in your phone settings")
+                    DispatchQueue.main.async {
+                        sender.isOn = false
+                        self.showAlert("Error", "You should change property in settings")
+                    }
                 }
             }
-            let content = UNMutableNotificationContent()
-            content.title = "Are you there?"
-            content.body = "This Is your body speaking. Don't forget to drink water or something like this!"
-            content.sound = .default
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
-            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-            center.add(request)
         } else {
-            showAlert("It's a pity :(", "You will not get notifications more. But don't forget to drink!")
-            center.removeAllPendingNotificationRequests()
+            notifications.dismissNotifications()
+            showAlert("So sad :(", "You will not get notifications more")
         }
+        self.view.isUserInteractionEnabled = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {

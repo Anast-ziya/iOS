@@ -17,7 +17,6 @@ class AddWaterViewController: UIViewController {
     
     
     var list = ["Water", "Tea", "Coffee", "Milk"]
-    var selectedDrink: String = ""
     private let unitIsMetric = PreferencesManager.shared.currentUserPrefrences?.unit == .metric
     private var amountOfWater: Int {
         var valueFromWaterSlider = waterSlider.value
@@ -79,7 +78,6 @@ extension AddWaterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         self.selectDrinkLabel.text = self.list[row]
-        selectedDrink = list[row]
         
     }
     
