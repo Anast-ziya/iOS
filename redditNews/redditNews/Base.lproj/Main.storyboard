@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s5g-Ik-d2F">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reddit-->
+        <scene sceneID="pfi-61-Gva">
+            <objects>
+                <tableViewController id="q01-kB-o31" customClass="RedditTableViewController" customModule="RedditApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vVY-01-9Pw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.49362244900000002" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="qYs-gA-D3I">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="108" id="K8d-Hx-Mhd" customClass="RedditTableViewCell" customModule="RedditApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="108"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K8d-Hx-Mhd" id="UDQ-CS-jTI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="ogb-iO-QDJ">
+                                            <rect key="frame" x="10" y="0.0" width="404" height="108"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G9Z-e8-mbh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="198.5" height="108"/>
+                                                    <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text=" reddit header and title" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0y4-a0-Qiv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="198.5" height="108"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="0y4-a0-Qiv" secondAttribute="trailing" id="cLh-PI-9Ur"/>
+                                                        <constraint firstItem="0y4-a0-Qiv" firstAttribute="leading" secondItem="G9Z-e8-mbh" secondAttribute="leading" id="gU6-kV-WCv"/>
+                                                        <constraint firstAttribute="bottom" secondItem="0y4-a0-Qiv" secondAttribute="bottom" id="rav-bV-hfZ"/>
+                                                        <constraint firstItem="0y4-a0-Qiv" firstAttribute="top" secondItem="G9Z-e8-mbh" secondAttribute="top" id="yBW-il-JSX"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redditImage" translatesAutoresizingMaskIntoConstraints="NO" id="BdJ-uq-8qh">
+                                                    <rect key="frame" x="205.5" y="0.0" width="198.5" height="108"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BdJ-uq-8qh" firstAttribute="leading" secondItem="G9Z-e8-mbh" secondAttribute="trailing" constant="7" id="1Ci-XE-ZRd"/>
+                                                <constraint firstItem="BdJ-uq-8qh" firstAttribute="top" secondItem="ogb-iO-QDJ" secondAttribute="top" id="6Sp-rt-LxP"/>
+                                                <constraint firstItem="BdJ-uq-8qh" firstAttribute="leading" secondItem="G9Z-e8-mbh" secondAttribute="trailing" constant="7" id="PqA-2m-daL"/>
+                                                <constraint firstAttribute="trailing" secondItem="BdJ-uq-8qh" secondAttribute="trailing" id="XIs-Ih-aLx"/>
+                                                <constraint firstAttribute="bottom" secondItem="BdJ-uq-8qh" secondAttribute="bottom" id="zex-lb-c9j"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ogb-iO-QDJ" firstAttribute="top" secondItem="UDQ-CS-jTI" secondAttribute="top" id="6Te-7B-3CA"/>
+                                        <constraint firstAttribute="trailing" secondItem="ogb-iO-QDJ" secondAttribute="trailing" id="dbo-Uv-m7a"/>
+                                        <constraint firstAttribute="bottom" secondItem="ogb-iO-QDJ" secondAttribute="bottom" id="ekC-30-Tw6"/>
+                                        <constraint firstItem="ogb-iO-QDJ" firstAttribute="leading" secondItem="UDQ-CS-jTI" secondAttribute="leading" constant="10" id="zLp-Mz-cph"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="redditImageView" destination="BdJ-uq-8qh" id="Z0F-2b-uFs"/>
+                                    <outlet property="redditTextView" destination="0y4-a0-Qiv" id="3jh-DF-G7v"/>
+                                    <segue destination="1nc-gT-xMf" kind="show" identifier="cellToDetail" id="DYW-Yp-h4G"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="q01-kB-o31" id="Tvc-d6-OYi"/>
+                            <outlet property="delegate" destination="q01-kB-o31" id="uiK-Vl-A43"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Reddit" id="Wzx-ft-oak"/>
+                    <connections>
+                        <outlet property="searchBar" destination="qYs-gA-D3I" id="CoO-hO-Zpb"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mKV-Ex-uIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600.79999999999995" y="47.226386806596707"/>
+        </scene>
+        <!--Reddit View Controller-->
+        <scene sceneID="zOJ-X9-RuB">
+            <objects>
+                <viewController id="1nc-gT-xMf" customClass="RedditViewController" customModule="RedditApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JJU-20-xDB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcY-Pq-OqT">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wQy-VW-ZwO"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RcY-Pq-OqT" firstAttribute="trailing" secondItem="wQy-VW-ZwO" secondAttribute="trailing" id="Db3-5x-2xZ"/>
+                            <constraint firstItem="RcY-Pq-OqT" firstAttribute="leading" secondItem="wQy-VW-ZwO" secondAttribute="leading" id="GF7-jT-kBw"/>
+                            <constraint firstItem="RcY-Pq-OqT" firstAttribute="top" secondItem="wQy-VW-ZwO" secondAttribute="top" id="lK6-zZ-63H"/>
+                            <constraint firstItem="RcY-Pq-OqT" firstAttribute="bottom" secondItem="wQy-VW-ZwO" secondAttribute="bottom" id="yVq-Vw-RYM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uFz-uz-nzK"/>
+                    <connections>
+                        <outlet property="postWebView" destination="RcY-Pq-OqT" id="Xd0-rX-WTK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b58-As-xqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421.5999999999999" y="48.125937031484263"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FIV-zQ-ITS">
+            <objects>
+                <navigationController id="s5g-Ik-d2F" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="zxQ-hv-dgM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.92156863209999995" green="0.33333334329999997" blue="0.15686275059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.92156863209999995" green="0.33333334329999997" blue="0.15686275059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.92156862745098034" green="0.33333333333333331" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="q01-kB-o31" kind="relationship" relationship="rootViewController" id="63l-Uy-WRc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igQ-ah-834" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-351" y="47"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="redditImage" width="1200" height="800"/>
+    </resources>
+</document>
